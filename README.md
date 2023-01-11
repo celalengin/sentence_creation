@@ -1,5 +1,11 @@
 # sentence_creation
 
+![ss](https://user-images.githubusercontent.com/56363793/211888966-e56102ad-e61a-4e2c-86e3-cb0b72074d2d.png)
+
+A simple sentence creation application.
+
+Uses provider, percent_indicator, animate_do packages.
+
 A new Flutter project.
 
 ## Getting Started
