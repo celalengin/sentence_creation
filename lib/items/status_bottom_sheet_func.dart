@@ -1,16 +1,15 @@
-import '../items/status_bottom_sheet_widget.dart';
-
 import 'package:flutter/material.dart';
+import '../constants.dart';
+import '../items/status_bottom_sheet_widget.dart';
 
 void statusBottomSheet({
   required BuildContext context,
   required bool isCorrect,
   required String sentence,
-  bool isSentenceCreation = false,
 }) {
   showModalBottomSheet(
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(12))),
+      shape:
+          const RoundedRectangleBorder(borderRadius: statusBottomSheetRadius),
       elevation: 0,
       barrierColor: Colors.transparent,
       isDismissible: false,
@@ -23,6 +22,3 @@ void statusBottomSheet({
         );
       });
 }
-
-const BorderRadiusGeometry statusBottomSheetRadius =
-    BorderRadius.vertical(top: Radius.circular(12));
