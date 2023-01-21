@@ -14,8 +14,6 @@ class StatusBottomSheetWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> sentenceWords = sentence.split("*");
-
     return WillPopScope(
       onWillPop: () async {
         return false;
@@ -47,27 +45,19 @@ class StatusBottomSheetWidget extends StatelessWidget {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Wrap(
-                    runAlignment: WrapAlignment.center,
-                    children: sentenceWords.map((e) {
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 2.4, vertical: 4),
-                        child: Text(
-                          e,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 19,
-                            color: isCorrect
-                                ? Colors.green[600]!
-                                : Colors.red[600]!,
-                          ),
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        sentence,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 19,
+                          color:
+                              isCorrect ? Colors.green[600]! : Colors.red[600]!,
                         ),
-                      );
-                    }).toList(),
-                  ),
-                ),
+                      ),
+                    )),
               ),
               Padding(
                 padding: const EdgeInsets.all(12.0),
