@@ -6,11 +6,6 @@ class PracticeState with ChangeNotifier {
 
   bool get isAnswered => _isAnswered;
 
-  set isAnswered(bool x) {
-    _isAnswered = x;
-    notifyListeners();
-  }
-
   bool _isCorrect = false;
 
   bool get isCorrect => _isCorrect;
